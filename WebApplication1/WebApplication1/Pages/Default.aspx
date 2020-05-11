@@ -12,6 +12,7 @@
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/popper.min.js"></script>
+
 </head>
 <body class="text-center">
     <form id="form1" runat="server">
@@ -21,8 +22,9 @@
             <asp:TextBox runat="server" id="inputLogin" class="form-control" placeholder="Login" />
             <asp:TextBox runat="server" id="inputPassword" TextMode="Password" class="form-control" placeholder="Hasło" />
             <asp:button runat="server" ID="buttonLogin" class="m-2 btn btn-primary btn-block btn-lg" Text="Zaloguj" OnClick="buttonLogin_Click" />
-            <asp:Label ID="LabelLoginFailed" runat="server" class="h5 font-weight-normal" Text="" />
+            <asp:Label ID="LabelLoginFailed" runat="server" class="h5 font-weight-normal" Text="Niepoprawne dane logowania" />
         </div>
     </form>
+
 </body>
 </html>

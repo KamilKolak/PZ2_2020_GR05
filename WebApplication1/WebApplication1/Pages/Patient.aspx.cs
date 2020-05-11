@@ -11,7 +11,15 @@ namespace WebApplication1.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] == null) Response.Redirect("Default.aspx");
 
+            LabelWelcome.Text = "Witaj " + Session["username"];
+        }
+
+        protected void buttonLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Default.aspx");
         }
     }
 }

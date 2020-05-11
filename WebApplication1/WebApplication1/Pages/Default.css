@@ -2,7 +2,7 @@
     background-color: #f5f5f5;
 }
 
-img{
+img {
     width: 100px;
     height: 100px;
 }
@@ -21,4 +21,3 @@ img{
 #LabelLoginFailed {
     color: red;
 }
-

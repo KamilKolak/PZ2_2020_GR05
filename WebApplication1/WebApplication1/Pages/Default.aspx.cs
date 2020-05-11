@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -14,7 +15,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LabelLoginFailed.Text = "";
+            LabelLoginFailed.Visible = false;
         }
 
 
@@ -32,10 +33,11 @@ namespace WebApplication1
             {
                 if (dtbl.Rows[0]["permissionlvl"].ToString() == "3")
                 {
+                    Session["username"] = inputLogin.Text.Trim();
                     Response.Redirect("Patient.aspx");
                 }
             }
-            else LabelLoginFailed.Text = "Niepoprawne dane logowania";
+            else LabelLoginFailed.Visible = true; ;
             sqlcon.Close();
             inputLogin.Text = "";
         }
