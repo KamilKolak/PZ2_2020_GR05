@@ -35,10 +35,9 @@
             // 
             // Logout_button
             // 
-            this.Logout_button.Location = new System.Drawing.Point(299, 144);
-            this.Logout_button.Margin = new System.Windows.Forms.Padding(4);
+            this.Logout_button.Location = new System.Drawing.Point(224, 117);
             this.Logout_button.Name = "Logout_button";
-            this.Logout_button.Size = new System.Drawing.Size(100, 28);
+            this.Logout_button.Size = new System.Drawing.Size(75, 23);
             this.Logout_button.TabIndex = 11;
             this.Logout_button.Text = "Wyloguj";
             this.Logout_button.UseVisualStyleBackColor = true;
@@ -46,10 +45,10 @@
             // 
             // ModifyPatient_button
             // 
-            this.ModifyPatient_button.Location = new System.Drawing.Point(42, 41);
-            this.ModifyPatient_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ModifyPatient_button.Location = new System.Drawing.Point(32, 33);
+            this.ModifyPatient_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ModifyPatient_button.Name = "ModifyPatient_button";
-            this.ModifyPatient_button.Size = new System.Drawing.Size(261, 66);
+            this.ModifyPatient_button.Size = new System.Drawing.Size(196, 54);
             this.ModifyPatient_button.TabIndex = 10;
             this.ModifyPatient_button.Text = "MODYFIKACJA DANYCH PACJENTA";
             this.ModifyPatient_button.UseVisualStyleBackColor = true;
@@ -57,10 +56,10 @@
             // 
             // AddPatient_button
             // 
-            this.AddPatient_button.Location = new System.Drawing.Point(392, 41);
-            this.AddPatient_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddPatient_button.Location = new System.Drawing.Point(294, 33);
+            this.AddPatient_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddPatient_button.Name = "AddPatient_button";
-            this.AddPatient_button.Size = new System.Drawing.Size(269, 68);
+            this.AddPatient_button.Size = new System.Drawing.Size(202, 55);
             this.AddPatient_button.TabIndex = 9;
             this.AddPatient_button.Text = "DODANIE NOWEGO PACJENTA";
             this.AddPatient_button.UseVisualStyleBackColor = true;
@@ -68,16 +67,16 @@
             // 
             // FormReceptionist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 210);
+            this.ClientSize = new System.Drawing.Size(522, 171);
             this.Controls.Add(this.Logout_button);
             this.Controls.Add(this.ModifyPatient_button);
             this.Controls.Add(this.AddPatient_button);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReceptionist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReceptionist";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReceptionist_FormClosed);
             this.Load += new System.EventHandler(this.FormReceptionist_Load);
             this.ResumeLayout(false);
 

@@ -45,7 +45,9 @@ namespace Hospital
             ladowaniedoktor();
             ladowaniepatient();
             ladowanierecepcja();
-            
+            ladowanieksiegowy();
+
+
         }
 
         private int checkcheckbox()
@@ -53,8 +55,8 @@ namespace Hospital
             if (Admin_checkBox.Checked == true) return 0;
             else if (Doctor_checkBox.Checked == true) return 1;
             else if (Receptionist_checkBox.Checked == true) return 2;
-            else return 3;
-            //admin ma w dupie pacjentów, tym zajmuje się recepcionista
+            else return 4;
+            
         }
 
         private void AddUser_button_Click(object sender, EventArgs e)
@@ -64,10 +66,10 @@ namespace Hospital
 
             try
             {
-                string pytanie = "Insert into Users(Username,Password,permissionlvl) values('" + Username_textBox.Text + "','" + Password_textBox.Text + "','" + checkcheckbox() + "') ;";
+                string pytanie = "Insert into Baza(Login,Password,PermissionLvl) values('" + Username_textBox.Text + "','" + Password_textBox.Text + "','" + checkcheckbox() + "') ;";
                 SqlCommand sda = new SqlCommand(pytanie, sqlUsers);
                 sda.ExecuteNonQuery();
-                string str1 = "select max(Id) from Users;";
+                string str1 = "select max(Id) from Baza;";
                 SqlCommand cmd1 = new SqlCommand(str1, sqlUsers);
                 SqlDataReader dr = cmd1.ExecuteReader();
                 if (dr.Read())
@@ -135,7 +137,7 @@ namespace Hospital
 
         private void FormAdmina_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'hospitalDataSet.Patient' . Możesz go przenieść lub usunąć.
+            //Ten wiersz kodu wczytuje dane do tabeli 'hospitalDataSet.Patient' 
             this.patientTableAdapter.Fill(this.hospitalDataSet.Patient);
 
         }
@@ -145,7 +147,7 @@ namespace Hospital
             string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename="+Form1.sciezka);
             using (SqlConnection conDataBase = new SqlConnection(constring))
             {
-                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Username, Password FROM Users where permissionlvl=1;", conDataBase);
+                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Login, Password FROM Baza where PermissionLvl=1;", conDataBase);
                 try
                 {
 
@@ -171,7 +173,7 @@ namespace Hospital
             string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename="+Form1.sciezka + ";Integrated Security=True");
             using (SqlConnection conDataBase = new SqlConnection(constring))
             {
-                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Username, Password FROM Users where permissionlvl=2;", conDataBase);
+                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Login, Password FROM Baza where PermissionLvl=2;", conDataBase);
                 try
                 {
 
@@ -197,7 +199,7 @@ namespace Hospital
             string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
             using (SqlConnection conDataBase = new SqlConnection(constring))
             {
-                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Username, Password FROM Users where permissionlvl=3;", conDataBase);
+                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Login, Password FROM Baza where PermissionLvl=3;", conDataBase);
                 try
                 {
 
@@ -218,6 +220,35 @@ namespace Hospital
             }
         }
 
+
+
+        private void ladowanieksiegowy()
+        {
+            string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            using (SqlConnection conDataBase = new SqlConnection(constring))
+            {
+                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Login, Password FROM Baza where PermissionLvl=4;", conDataBase);
+                try
+                {
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+                    sqlDataAdapter.SelectCommand = sqlCommand;
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+                    BindingSource bSource = new BindingSource();
+                    bSource.DataSource = dataTable;
+                    dataGridView4.DataSource = bSource;
+                    sqlDataAdapter.Update(dataTable);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
@@ -230,20 +261,20 @@ namespace Hospital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            foreach (DataGridViewRow item in this.dataGridView2.SelectedRows)
             {
 
-                dataGridView1.Rows.RemoveAt(item.Index);
+                dataGridView2.Rows.RemoveAt(item.Index);
 
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            foreach (DataGridViewRow item in this.dataGridView3.SelectedRows)
             {
 
-                dataGridView1.Rows.RemoveAt(item.Index);
+                dataGridView3.Rows.RemoveAt(item.Index);
 
             }
         }
@@ -291,6 +322,50 @@ namespace Hospital
         private void Logout_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ladowanieksiegowy();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView4.SelectedRows)
+            {
+
+                dataGridView4.Rows.RemoveAt(item.Index);
+
+            }
+        }
+
+        private void FormAdmina_FormClosed(object sender, FormClosedEventArgs e)
+        {
             logowanie.Show();
         }
     }

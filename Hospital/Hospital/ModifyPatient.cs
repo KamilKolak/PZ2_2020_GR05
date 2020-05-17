@@ -36,7 +36,7 @@ namespace Hospital
                 {
                     TablePatient.Open();
                     {
-                        using (SqlCommand command = new SqlCommand("DELETE FROM Patient WHERE " + " Id  " + " = '" + ID_textBox.Text + "'", TablePatient))
+                        using (SqlCommand command = new SqlCommand("DELETE FROM Baza WHERE " + " Id  " + " = '" + ID_textBox.Text + "'", TablePatient))
                         {
                             {
                                 command.ExecuteNonQuery();
@@ -67,7 +67,7 @@ namespace Hospital
             string constring = (connectionSQL);
             using (SqlConnection conDataBase = new SqlConnection(constring))
             {
-                SqlCommand cmdDataBase = new SqlCommand("SELECT * FROM Patient;", conDataBase);
+                SqlCommand cmdDataBase = new SqlCommand("SELECT * FROM Baza;", conDataBase);
                 try
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -106,7 +106,7 @@ namespace Hospital
         {
             SqlConnection sqlTable = new SqlConnection(connectionSQL);
             sqlTable.Open();
-            SqlCommand komand = new SqlCommand("UPDATE Patient SET Login=@a1 , Password=@a2,  Name=@a3 , Surname=@a4 , Age=@a5 , Gender=@a6 , Birthday=@a7 , Prize=@a8 WHERE Id =@a9", sqlTable);
+            SqlCommand komand = new SqlCommand("UPDATE Baza SET Login=@a1 , Password=@a2,  Name=@a3 , Surname=@a4 , Wiek=@a5 , Plec=@a6 , Dataurodzenia=@a7 , Prize=@a8 WHERE Id =@a9", sqlTable);
             komand.Parameters.AddWithValue("a1", Login_textBox.Text);
             komand.Parameters.AddWithValue("a2", Password_textBox.Text);
             komand.Parameters.AddWithValue("a3", Name_textBox.Text);
@@ -131,12 +131,16 @@ namespace Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            oknoWyboruRecepcjonisty.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ModifyPatient_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            oknoWyboruRecepcjonisty.Show();
         }
     }
 }

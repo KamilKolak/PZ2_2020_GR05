@@ -18,19 +18,19 @@ namespace Hospital
             InitializeComponent();
         }
 
-        public static string sciezka = @"F:\NAJNOWSZE\Hospital\Hospital\bin\Debug\HOSPITAL.MDF";
+        public static string sciezka = Application.StartupPath + @"\HOSPITAL.MDF"; // deklaracja zmiennej dla sciezki
 
-        private void Login_button_Click(object sender, EventArgs e)
+        private void Login_button_Click(object sender, EventArgs e) // przycisk logowania
         {
             SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= " + Form1.sciezka + ";Integrated Security=True;Connect Timeout=30");
             sqlcon.Open();
-            string zapytanie = "select permissionlvl from Users where username= '"+ Login_textBox.Text.Trim() +"' and password ='"+ Password_textBox.Text.Trim() +"';";
+            string zapytanie = "select PermissionLvl from Baza where Login= '"+ Login_textBox.Text.Trim() +"' and Password ='"+ Password_textBox.Text.Trim() +"';";
             SqlDataAdapter sda = new SqlDataAdapter(zapytanie, sqlcon);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
-            if (dtbl.Rows.Count == 1)
+            if (dtbl.Rows.Count == 1)  
             {
-                if (dtbl.Rows[0]["permissionlvl"].ToString() == "0")
+                if (dtbl.Rows[0]["PermissionLvl"].ToString() == "0")  // warunek dla permission level dla admina
                 {
                     Login_textBox.Text = "";
                     Password_textBox.Text = "";
@@ -38,15 +38,16 @@ namespace Hospital
                     this.Hide();
                     oknoAdmina.Show();
                 }
-                else if(dtbl.Rows[0]["permissionlvl"].ToString() == "1")
+                else if(dtbl.Rows[0]["PermissionLvl"].ToString() == "1") // warunek dla permission level dla doktora
                 {
+                    findIDdoktor();
                     Login_textBox.Text = "";
                     Password_textBox.Text = "";
-                    FormDoctors oknoDoktora = new FormDoctors(this);
+                    
                     this.Hide();
-                    oknoDoktora.Show();
+                   
                 }
-                else if (dtbl.Rows[0]["permissionlvl"].ToString() == "2")
+                else if (dtbl.Rows[0]["PermissionLvl"].ToString() == "2")  // warunek dla permission level dla recepcjonisty 
                 {
                     Login_textBox.Text = "";
                     Password_textBox.Text = "";
@@ -54,14 +55,15 @@ namespace Hospital
                     this.Hide();
                     oknoRecepcionisty.Show();
                 }
-                else if (dtbl.Rows[0]["permissionlvl"].ToString() == "3")
+                else if (dtbl.Rows[0]["PermissionLvl"].ToString() == "3")  // dla pacjenta
                 {
+                    findID();  // funkcja pobiera id pacjenta ktory sie loguje
                     Login_textBox.Text = "";
                     Password_textBox.Text = "";
-                    findID();
+                    
                     this.Hide();                    
                 }
-                else
+                else  // warunek dla permission level dla ksiegowego
                 {
                     Login_textBox.Text = "";
                     Password_textBox.Text = "";
@@ -74,21 +76,44 @@ namespace Hospital
             sqlcon.Close();
         }
 
-        private void findID()
+        private void findID() // znajdowanie Id pacjenta
         {
             SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= " + Form1.sciezka + ";Integrated Security=True;Connect Timeout=30");
             sqlcon.Open();
-            string Id = "Select Id from Patient Where Login= '" + Login_textBox.Text.Trim() + "' and Password= '" + Password_textBox.Text.Trim() + "';";
+            string Id = "Select Id from Baza Where Login= '" + Login_textBox.Text.Trim() + "' and Password= '" + Password_textBox.Text.Trim() + "';";
+            string Prize = "Select Prize from Baza Where Login= '" + Login_textBox.Text.Trim() + "' and Password= '" + Password_textBox.Text.Trim() + "';";
             SqlCommand comand = new SqlCommand(Id, sqlcon);
+            SqlCommand comand1 = new SqlCommand(Prize, sqlcon);
+            
             int identyfikator = Convert.ToInt32(comand.ExecuteScalar());
+            int identyfikator1 = Convert.ToInt32(comand1.ExecuteScalar());
+            
             FormPatient oknoPacjenta = new FormPatient(this);
+
             TextBox tb = (TextBox)oknoPacjenta.Controls["Idtext"];
-            tb.Text = "5";
+            tb.Text = identyfikator.ToString();
             TextBox tb2 = (TextBox)oknoPacjenta.Controls["textbox1"];
-            tb2.Text = "300";
+            tb2.Text = identyfikator1.ToString();
+
             oknoPacjenta.Show();
-            sqlcon.Close();
+            sqlcon.Close(); // konczenie polaczenia
         }
+
+
+        private void findIDdoktor() // znajdowanie Id pacjenta
+        {
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= " + Form1.sciezka + ";Integrated Security=True;Connect Timeout=30");
+            sqlcon.Open();
+            string IdLekarz = "Select Id from Baza Where Login= '" + Login_textBox.Text.Trim() + "' and Password= '" + Password_textBox.Text.Trim() + "';";
+            SqlCommand comandLekarz = new SqlCommand(IdLekarz, sqlcon);
+            int identyfikatorLekarz = Convert.ToInt32(comandLekarz.ExecuteScalar());
+            FormDoctors oknoDoktora = new FormDoctors(this);
+            TextBox tb2 = (TextBox)oknoDoktora.Controls["textbox12"];
+            tb2.Text = identyfikatorLekarz.ToString();
+            oknoDoktora.Show();
+            sqlcon.Close(); // konczenie polaczenia
+        }
+
 
         private void Back_button_Click(object sender, EventArgs e)
         {
@@ -108,6 +133,11 @@ namespace Hospital
         private void Password_textBox_TextChanged(object sender, EventArgs e)
         {
             Password_textBox.PasswordChar = '*';
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
         }
     }
 }

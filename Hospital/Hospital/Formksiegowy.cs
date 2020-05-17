@@ -14,23 +14,25 @@ namespace Hospital
     public partial class Formksiegowy : Form
     {
         Form1 oknoKsiegowego;
+
         public Formksiegowy(Form1 oknoKsiegowego)
         {
             InitializeComponent();
             ladowanie();
             this.oknoKsiegowego = oknoKsiegowego;
+
         }
 
         private void Formksiegowy_Load(object sender, EventArgs e)
         {
 
         }
-        private void ladowanie()
+        private void ladowanie()  
         {
             string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
             using (SqlConnection sqlConnection = new SqlConnection(constring))
             {
-                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Name,Surname,Prize FROM Patient;", sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("SELECT Id, Name,Surname,Prize FROM Baza where PermissionLvl= 3;", sqlConnection);
                 try
                 {
 
@@ -52,16 +54,16 @@ namespace Hospital
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // przycisk wczytaj
         {
             ladowanie();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // dla przycisku zapisz
         {
             SqlConnection sqlConnection2 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
             sqlConnection2.Open();
-            SqlCommand sqlCommand = new SqlCommand("UPDATE Patient SET Prize="+ Int16.Parse(textBox4.Text) + " WHERE Id ="+ Int16.Parse(textBox1.Text) +";", sqlConnection2);
+            SqlCommand sqlCommand = new SqlCommand("UPDATE Baza SET Prize="+ Int16.Parse(textBox4.Text) + " WHERE Id ="+ Int16.Parse(textBox1.Text) +";", sqlConnection2);
 
 
             sqlCommand.ExecuteNonQuery();
@@ -74,14 +76,12 @@ namespace Hospital
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // dla przycisku powrot 
         {
             this.Close();
-            Form1 elo = new Form1();
-            elo.Show();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) // przeskoczenie do textboxow zaznaczonego wiersza
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[index];
@@ -89,6 +89,12 @@ namespace Hospital
             textBox2.Text = selectedRow.Cells[1].Value.ToString();
             textBox3.Text = selectedRow.Cells[2].Value.ToString();
             textBox4.Text = selectedRow.Cells[3].Value.ToString();
+        }
+
+        private void Formksiegowy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 logowanie = new Form1();
+            logowanie.Show();
         }
     }
 }

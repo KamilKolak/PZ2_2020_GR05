@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
-
+using System.IO;
 
 namespace Hospital
 {
@@ -22,37 +22,35 @@ namespace Hospital
             this.logowanie = logowanie;
             logowanie.Hide();
             ladowanie();
-            textBox11.Text = DateTime.Today.ToString("yyyy-MM-dd");
-        }
-        int selectedRow;
+            ladowanie2();
+
+            textBox11.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            textBox13.Text = DateTime.Now.Day.ToString();
+            textBox14.Text = DateTime.Now.Month.ToString();
+            textBox15.Text = DateTime.Now.Year.ToString();
+            
+
+
+
+        }  
         private void FormDoctors_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'hospitalDataSet.Patient' . Możesz go przenieść lub usunąć.
-            this.patientTableAdapter.Fill(this.hospitalDataSet.Patient);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'hospitalDataSet4.Baza' . Możesz go przenieść lub usunąć.
+            this.bazaTableAdapter3.Fill(this.hospitalDataSet4.Baza);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'hospitalDataSet3.Baza' . Możesz go przenieść lub usunąć.
+          
+            this.bazaTableAdapter2.Fill(this.hospitalDataSet3.Baza);
+            
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = dataGridView1.Rows[selectedRow];
-            selectedRow = e.RowIndex;
-            textBox1.Text = row.Cells[0].Value.ToString();
-            textBox2.Text = row.Cells[1].Value.ToString();
-            textBox3.Text = row.Cells[2].Value.ToString();
-            textBox4.Text = row.Cells[3].Value.ToString();
-            textBox5.Text = row.Cells[4].Value.ToString();
-            textBox6.Text = row.Cells[5].Value.ToString();
-            textBox7.Text = row.Cells[6].Value.ToString();
-            textBox8.Text = row.Cells[1].Value.ToString();
-            textBox9.Text = row.Cells[2].Value.ToString();
-
-        }
+        
         private void ladowanie()
         {
             string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
             using (SqlConnection conDataBase = new SqlConnection(constring))
             {
-                SqlCommand cmdDataBase = new SqlCommand("SELECT Id, Name, Surname, Age, Gender, Birthday, Prize FROM Patient;", conDataBase);
+                SqlCommand cmdDataBase = new SqlCommand("SELECT Name, Surname, Wiek, Plec, DataUrodzenia FROM Baza where PermissionLvl=3;", conDataBase);
                 try
                 {
 
@@ -73,16 +71,37 @@ namespace Hospital
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void ladowanie2()
         {
-            SqlConnection sqlConnection2 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
-            sqlConnection2.Open();
-            SqlCommand sqlCommand2 = new SqlCommand("UPDATE Patient SET Name="+textBox2+" ,  Surname="+textBox3+" , Age="+textBox4+", Gender="+textBox5+", Birthday="+textBox6+" , Prize="+textBox7+"    WHERE Id="+textBox1+";", sqlConnection2);
-            sqlCommand2.ExecuteNonQuery();
-            MessageBox.Show("UPDATED!");
+            string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            using (SqlConnection conDataBase1 = new SqlConnection(constring))
+            {
+                // SqlCommand cmdDataBase1 = new SqlCommand("SELECT Name, Surname, Wiek, Plec, DataUrodzenia FROM Baza where PermissionLvl=3, IdLekarza=" + textBox12.Text + ",RokWizyty=" + textBox15.Text + ",DzienWizyty >=" + textBox13.Text + " AND MiesiacWizyty >=" + textBox14.Text + ";", conDataBase1);
+                SqlCommand cmdDataBase1 = new SqlCommand("SELECT Name, Surname, Wiek, Plec, DataUrodzenia FROM Baza where PermissionLvl=3 AND RokWizyty ='"+ DateTime.Now.Year + "' AND DzienWizyty ='" + DateTime.Now.Day + "'AND MiesiacWizyty ='" + DateTime.Now.Month + "';", conDataBase1);
+                try
+                {
+
+                    SqlDataAdapter sqlDataAdapter1 = new SqlDataAdapter();
+                    sqlDataAdapter1.SelectCommand = cmdDataBase1;
+                    DataTable dataTable1 = new DataTable();
+                    sqlDataAdapter1.Fill(dataTable1);
+                    BindingSource bSource1 = new BindingSource();
+                    bSource1.DataSource = dataTable1;
+                    dataGridView2.DataSource = bSource1;
+                    sqlDataAdapter1.Update(dataTable1);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+      
+
+        private void button2_Click(object sender, EventArgs e) // wczytanie
         {
             ladowanie();
         }
@@ -90,7 +109,6 @@ namespace Hospital
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-            logowanie.Show();
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
@@ -101,6 +119,84 @@ namespace Hospital
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                textBox8.Text = row.Cells[1].Value.ToString();
+                textBox9.Text = row.Cells[2].Value.ToString();
+                
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+           Microsoft.Office.Interop.Excel.Workbook sheet = excel.Workbooks.Open("C:\\Test\\documentt.xlsx");
+            Microsoft.Office.Interop.Excel.Worksheet x = excel.ActiveSheet as Microsoft.Office.Interop.Excel.Worksheet;
+           x.Columns.AutoFit();
+            DateTime localDate = DateTime.Now;
+            x.Range["D2"].Value = textBox9.Text;            // imie pacjenta
+            x.Range["E2"].Value = textBox8.Text;           // nazwisko pacjenta
+            x.Range["C2"].Value = localDate;               // data
+            x.Range["B2"].Value = textBox10.Text;         // recepta
+
+
+            sheet.Close(true, Type.Missing, Type.Missing);
+            excel.Quit();
+            MessageBox.Show("Pomyslnie zapisano receptę");
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string constring = (@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            using (SqlConnection conDataBase = new SqlConnection(constring))
+            {
+                SqlCommand cmdDataBase = new SqlCommand("SELECT * FROM Baza WHERE username=  '" + textBox16.Text + "';", conDataBase);
+                try
+                {
+
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmdDataBase;
+                    System.Data.DataTable dbdataset = new System.Data.DataTable();
+                    sda.Fill(dbdataset);
+                    BindingSource bSource = new BindingSource();
+
+                    bSource.DataSource = dbdataset;
+                    dataGridView1.DataSource = bSource;
+                    sda.Update(dbdataset);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void FormDoctors_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            logowanie.Show();
         }
     }
 }

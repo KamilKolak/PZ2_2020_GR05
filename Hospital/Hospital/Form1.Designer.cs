@@ -41,21 +41,19 @@
             // 
             // Back_button
             // 
-            this.Back_button.Location = new System.Drawing.Point(293, 228);
-            this.Back_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Back_button.Location = new System.Drawing.Point(220, 185);
             this.Back_button.Name = "Back_button";
-            this.Back_button.Size = new System.Drawing.Size(100, 50);
+            this.Back_button.Size = new System.Drawing.Size(75, 41);
             this.Back_button.TabIndex = 11;
-            this.Back_button.Text = "Powrót";
+            this.Back_button.Text = "Zamknij";
             this.Back_button.UseVisualStyleBackColor = true;
             this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
             // 
             // Login_button
             // 
-            this.Login_button.Location = new System.Drawing.Point(417, 228);
-            this.Login_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Login_button.Location = new System.Drawing.Point(313, 185);
             this.Login_button.Name = "Login_button";
-            this.Login_button.Size = new System.Drawing.Size(100, 50);
+            this.Login_button.Size = new System.Drawing.Size(75, 41);
             this.Login_button.TabIndex = 10;
             this.Login_button.Text = "Zaloguj";
             this.Login_button.UseVisualStyleBackColor = true;
@@ -65,10 +63,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(291, 143);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(218, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Hasło";
             // 
@@ -76,28 +73,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(301, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(226, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Login";
             // 
             // Password_textBox
             // 
-            this.Password_textBox.Location = new System.Drawing.Point(385, 142);
-            this.Password_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password_textBox.Location = new System.Drawing.Point(289, 115);
             this.Password_textBox.Name = "Password_textBox";
-            this.Password_textBox.Size = new System.Drawing.Size(132, 22);
+            this.Password_textBox.Size = new System.Drawing.Size(100, 20);
             this.Password_textBox.TabIndex = 7;
             this.Password_textBox.TextChanged += new System.EventHandler(this.Password_textBox_TextChanged);
             // 
             // Login_textBox
             // 
-            this.Login_textBox.Location = new System.Drawing.Point(385, 79);
-            this.Login_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Login_textBox.Location = new System.Drawing.Point(289, 64);
             this.Login_textBox.Name = "Login_textBox";
-            this.Login_textBox.Size = new System.Drawing.Size(132, 22);
+            this.Login_textBox.Size = new System.Drawing.Size(100, 20);
             this.Login_textBox.TabIndex = 6;
             // 
             // pictureBox1
@@ -105,10 +99,10 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 267);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 217);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -116,9 +110,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 300);
+            this.ClientSize = new System.Drawing.Size(416, 244);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Back_button);
             this.Controls.Add(this.Login_button);
@@ -126,12 +120,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Password_textBox);
             this.Controls.Add(this.Login_textBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN PANEL";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -20,6 +20,9 @@ namespace Hospital
             InitializeComponent();
             this.logowanie = logowanie;
             logowanie.Hide();
+            ladowanie2();
+            ladowanie3();
+            ladowanie4();
         }
 
         private void Idtext_TextChanged(object sender, EventArgs e)
@@ -34,22 +37,78 @@ namespace Hospital
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            /*SqlConnection sqlConnection10 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            SqlConnection sqlConnection10 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
             sqlConnection10.Open();
-            SqlCommand sqlCommand = new SqlCommand("SELECT Prize FROM Patient WHERE Id='" + textBox1.Text + "'", sqlConnection10);
+            SqlCommand sqlCommand = new SqlCommand("SELECT Prize FROM Baza WHERE Id='" + textBox1.Text + "'", sqlConnection10);
             {
                 {
                     sqlCommand.ExecuteNonQuery();
+                    ladowanie2();
+                    ladowanie3();
+                    ladowanie4();
                 }
-            }*/
-            int a = 300;
-            textBox1.Text = a.ToString();
+            }
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+
+
+        private void ladowanie2()
+        {
+           
+            SqlConnection sqlConnection10 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            sqlConnection10.Open();
+            SqlCommand cmd = new SqlCommand("select DzienWizyty from Baza where Id='" + Idtext.Text+ "'", sqlConnection10);
+            SqlDataReader dr = cmd.ExecuteReader();
+           
+            while (dr.Read())
+            {
+                textBox2.Text = dr.GetValue(0).ToString();   
+            }
+            
+          
+
+            sqlConnection10.Close();
+        }
+
+        private void ladowanie3()
+        {
+            SqlConnection sqlConnection10 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            sqlConnection10.Open();
+            SqlCommand cmd1 = new SqlCommand("select MiesiacWizyty from Baza where Id='" + Idtext.Text + "'", sqlConnection10);
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+            while (dr1.Read())
+            {
+                textBox3.Text = dr1.GetValue(0).ToString();
+            }
+            sqlConnection10.Close();
+           
+        }
+        private void ladowanie4()
+        {
+            SqlConnection sqlConnection10 = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Form1.sciezka + ";Integrated Security=True");
+            sqlConnection10.Open();
+            SqlCommand cmd3 = new SqlCommand("select RokWizyty from Baza where Id='" + Idtext.Text + "'", sqlConnection10);
+            SqlDataReader dr3 = cmd3.ExecuteReader();
+            while (dr3.Read())
+            {
+                textBox4.Text = dr3.GetValue(0).ToString();
+            }
+            sqlConnection10.Close();
+            
+        }
+
+        private void FormPatient_FormClosed(object sender, FormClosedEventArgs e)
+        {
             logowanie.Show();
         }
     }
+    
 }

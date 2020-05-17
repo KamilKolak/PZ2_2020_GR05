@@ -39,13 +39,16 @@ namespace Hospital
         private void Logout_button_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 elo2 = new Form1();
-            elo2.Show();
         }
 
         private void FormReceptionist_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormReceptionist_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            logowanie.Show();
         }
     }
 }

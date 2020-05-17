@@ -49,3 +49,81 @@ F:\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
 F:\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
 F:\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.exe
 F:\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\bin\Debug\Hospital.mdf
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\bin\Debug\Hospital_log.ldf
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.Form1.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.FormAddPatient.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.FormAdmina.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.FormDoctors.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.Formksiegowy.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.FormPatient.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.FormReceptionist.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.ModifyPatient.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\Tyszka\Desktop\vidakis\NAJNOWSZE\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\bin\Debug\Hospital.mdf
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\bin\Debug\Hospital_log.ldf
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.Form1.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.FormAddPatient.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.FormAdmina.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.FormDoctors.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.Formksiegowy.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.FormPatient.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.FormReceptionist.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.ModifyPatient.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\Tyszka\Desktop\ZESPOLOWY\NAJNOWSZY PROBNY\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\bin\Debug\Hospital.mdf
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\bin\Debug\Hospital_log.ldf
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.Form1.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.FormAddPatient.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.FormAdmina.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.FormDoctors.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.Formksiegowy.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.FormPatient.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.FormReceptionist.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.ModifyPatient.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\Jakub Skutnik\Desktop\Hospital\Hospital\obj\Debug\Hospital.csproj.ResolveComReference.cache
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\bin\Debug\Hospital.mdf
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\bin\Debug\Hospital_log.ldf
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\bin\Debug\Hospital.exe.config
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\bin\Debug\Hospital.exe
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\bin\Debug\Hospital.pdb
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.csproj.ResolveComReference.cache
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.Form1.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.FormAddPatient.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.FormAdmina.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.FormDoctors.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.Formksiegowy.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.FormPatient.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.FormReceptionist.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.ModifyPatient.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.exe
+D:\GitHub\PZ2_2020_GR05\Hospital\Hospital\obj\Debug\Hospital.pdb

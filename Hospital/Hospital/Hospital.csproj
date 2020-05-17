@@ -108,6 +108,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HospitalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifyPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +181,50 @@
     <None Include="HospitalDataSet.xss">
       <DependentUpon>HospitalDataSet.xsd</DependentUpon>
     </None>
+    <None Include="HospitalDataSet1.xsc">
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet1.xss">
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet2.xsc">
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet2.xss">
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet3.xsc">
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet3.xss">
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet4.xsc">
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet4.xss">
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,6 +258,35 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
