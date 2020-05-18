@@ -25,13 +25,13 @@ namespace WebApplication1
         {
             SqlConnection sqlcon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + Default.sciezka + "; Integrated Security = True; Connect Timeout = 30");
             sqlcon.Open();
-            string zapytanie = "select permissionlvl from Users where username= '" + inputLogin.Text.Trim() + "' and password ='" + inputPassword.Text.Trim() + "';";
+            string zapytanie = "select PermissionLvl from Baza where Login= '" + inputLogin.Text.Trim() + "' and Password ='" + inputPassword.Text.Trim() + "';";
             SqlDataAdapter sda = new SqlDataAdapter(zapytanie, sqlcon);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
             if (dtbl.Rows.Count == 1)
             {
-                if (dtbl.Rows[0]["permissionlvl"].ToString() == "3")
+                if (dtbl.Rows[0]["Permissionlvl"].ToString() == "3")
                 {
                     Session["username"] = inputLogin.Text.Trim();
                     Response.Redirect("Patient.aspx");

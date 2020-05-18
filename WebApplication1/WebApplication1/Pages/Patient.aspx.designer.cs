@@ -33,6 +33,60 @@ namespace WebApplication1.Pages
         protected global::System.Web.UI.WebControls.Label LabelWelcome;
 
         /// <summary>
+        /// Kontrolka LabelId.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelId;
+
+        /// <summary>
+        /// Kontrolka LabelIdValue.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelIdValue;
+
+        /// <summary>
+        /// Kontrolka LabelToPaid.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelToPaid;
+
+        /// <summary>
+        /// Kontrolka LabelToPaidValue.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelToPaidValue;
+
+        /// <summary>
+        /// Kontrolka LabelVisit.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelVisit;
+
+        /// <summary>
+        /// Kontrolka LabelVisitValue.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelVisitValue;
+
+        /// <summary>
         /// Kontrolka buttonLogout.
         /// </summary>
         /// <remarks>

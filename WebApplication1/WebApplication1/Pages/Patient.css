@@ -1,7 +1,21 @@
 ﻿body {
     background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #buttonLogout {
     max-width: 200px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#info {
+    margin: auto;
+}
+
+#form1 {
+    margin-top: 20px;
 }
