@@ -33,22 +33,40 @@ namespace WebApplication1.Pages
         protected global::System.Web.UI.WebControls.Label LabelWelcome;
 
         /// <summary>
-        /// Kontrolka LabelId.
+        /// Kontrolka LabelName.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelId;
+        protected global::System.Web.UI.WebControls.Label LabelName;
 
         /// <summary>
-        /// Kontrolka LabelIdValue.
+        /// Kontrolka LabelNameValue.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelIdValue;
+        protected global::System.Web.UI.WebControls.Label LabelNameValue;
+
+        /// <summary>
+        /// Kontrolka LabelSurname.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSurname;
+
+        /// <summary>
+        /// Kontrolka LabelSurnameValue.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSurnameValue;
 
         /// <summary>
         /// Kontrolka LabelToPaid.
@@ -94,5 +112,50 @@ namespace WebApplication1.Pages
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button buttonLogout;
+
+        /// <summary>
+        /// Kontrolka inputOldPassword.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputOldPassword;
+
+        /// <summary>
+        /// Kontrolka inputNewPassword.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputNewPassword;
+
+        /// <summary>
+        /// Kontrolka buttonChangePassword.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonChangePassword;
+
+        /// <summary>
+        /// Kontrolka LabelPasswordChanged.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPasswordChanged;
+
+        /// <summary>
+        /// Kontrolka LabelIncorrectLoginPassword.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelIncorrectLoginPassword;
     }
 }

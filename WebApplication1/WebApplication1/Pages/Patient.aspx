@@ -17,33 +17,53 @@
 </head>
 <body class="text-center">
     <form id="form1" runat="server">
-        <div class="d-flex flex-column align-items-center  justify-content-center">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img class="m-2 float-sm-right"  src="/Images/patient.png" />
+        <div class="container card mt-4">
+
+            <div class="row card-header d-flex align-items-center justify-content-center">
+                <img class="m-1" src="/Images/patient.png" />
+                <asp:Label class="m-1 font-weight-bold" ID="LabelWelcome" runat="server" />
+            </div>
+           
+            <ul class="nav nav-tabs">
+                <li class="nav-item mt-2"><a class="nav-link active" data-toggle="tab" href="#profile">Profil</a></li>
+                <li class="nav-item mt-2"><a class="nav-link" data-toggle="tab" href="#password">Zmień hasło</a></li>
+            </ul>   
+
+            <div class="tab-content">
+                <div id="profile" class="tab-pane fade show active">
+                    <div class="row">
+                        <asp:Label ID="LabelName" runat="server" class="mb-2 ml-4 mt-2 font-weight-bold" Text="Imię: &nbsp;" />
+                        <asp:Label ID="LabelNameValue" runat="server" class="mb-2 mt-2 font-weight-normal" />
                     </div>
-                    <div class="col-sm-8" id="info">
-                        <div class="row  d-flex justify-content-center justify-content-sm-start">
-                            <asp:Label ID="LabelWelcome" runat="server" class="mb-2 font-weight-bold" />
-                        </div>
-                        <div class="row  d-flex justify-content-center justify-content-sm-start">
-                            <asp:Label ID="LabelId" runat="server" class="mb-2 font-weight-normal" Text="ID: &nbsp;" />
-                            <asp:Label ID="LabelIdValue" runat="server" class="mb-2 font-weight-normal" />
-                        </div>
-                        <div class="row  d-flex justify-content-center justify-content-sm-start">
-                            <asp:Label ID="LabelToPaid" runat="server" class="mb-2 font-weight-normal" Text="Do zapłaty: &nbsp;" />
-                            <asp:Label ID="LabelToPaidValue" runat="server" class="mb-2 font-weight-normal" />
-                        </div>
-                        <div class="row  d-flex justify-content-center justify-content-sm-start">
-                            <asp:Label ID="LabelVisit" runat="server" class="mb-2 font-weight-normal" Text="Następna wizyta: &nbsp;" />
-                            <asp:Label ID="LabelVisitValue" runat="server" class="mb-2 font-weight-normal" />
-                        </div>
-                        <div class="row  d-flex justify-content-center justify-content-sm-start">
-                            <asp:Button runat="server" ID="buttonLogout" class="m-2 btn btn-primary btn-block btn-sm" Text="Wyloguj" OnClick="buttonLogout_Click" />
-                        </div>
+                    <div class="row">
+                         <asp:Label ID="LabelSurname" runat="server" class="mb-2 ml-4 font-weight-bold" Text="Nazwisko: &nbsp;" />
+                        <asp:Label ID="LabelSurnameValue" runat="server" class="mb-2 font-weight-normal" />
+                    </div>
+                    <div class="row">
+                        <asp:Label ID="LabelToPaid" runat="server" class="mb-2 ml-4 font-weight-bold" Text="Do zapłaty: &nbsp;" />
+                        <asp:Label ID="LabelToPaidValue" runat="server" class="mb-2 font-weight-normal" />
+                    </div>
+                    <div class="row">
+                        <asp:Label ID="LabelVisit" runat="server" class="mb-2 ml-4 font-weight-bold" Text="Następna wizyta: &nbsp;" />
+                        <asp:Label ID="LabelVisitValue" runat="server" class="mb-2 font-weight-normal" />
+                    </div>
+                    <div class="row">
+                        <asp:Button runat="server" ID="buttonLogout" class="btn ml-4 mb-4 mt-2 btn-primary btn-block btn-sm" Text="Wyloguj" OnClick="buttonLogout_Click" />
                     </div>
                 </div>
+
+                <div id="password" class="tab-pane fade m-3">
+                    <asp:TextBox runat="server" id="inputOldPassword" TextMode="Password" class="form-control mt-2" placeholder="Podaj stare hasło" />
+                    <asp:TextBox runat="server" id="inputNewPassword" TextMode="Password" class="form-control mt-2" placeholder="Podaj nowe hasło" />
+                    <asp:Button runat="server" ID="buttonChangePassword" class="btn mt-3 mb-2 btn-primary btn-block btn-sm" Text="Zmień hasło" OnClick="buttonChangePassword_Click" />
+                </div>
+            </div>
+
         </div>
+
+        <asp:Label ID="LabelPasswordChanged" runat="server" Text="Hasło zostało zmienione" />
+        <asp:Label ID="LabelIncorrectLoginPassword" runat="server" Text="Zły login lub hasło" />
+
     </form>
 </body>
 </html>

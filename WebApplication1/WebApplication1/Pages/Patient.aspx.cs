@@ -11,6 +11,7 @@ namespace WebApplication1.Pages
 {
     public partial class Patient : System.Web.UI.Page
     {
+        public SqlConnection sqlcon;
         string username;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,6 +20,10 @@ namespace WebApplication1.Pages
             username = Session["username"].ToString();
 
             LabelWelcome.Text = "Witaj " + username;
+            LabelIncorrectLoginPassword.Visible = false;
+            LabelPasswordChanged.Visible = false;
+
+            sqlcon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + Default.sciezka + "; Integrated Security = True; Connect Timeout = 30");
             loadData();
         }
 
@@ -30,11 +35,13 @@ namespace WebApplication1.Pages
 
         private void loadData()
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + Default.sciezka + "; Integrated Security = True; Connect Timeout = 30");
             sqlcon.Open();
 
-            SqlCommand sqlCommandIdValue = new SqlCommand("Select Id from Baza Where Login= '" + username + "';", sqlcon);
-            LabelIdValue.Text = sqlCommandIdValue.ExecuteScalar().ToString();
+            SqlCommand sqlCommandNameValue = new SqlCommand("Select Name from Baza Where Login= '" + username + "';", sqlcon);
+            LabelNameValue.Text = sqlCommandNameValue.ExecuteScalar().ToString();
+
+            SqlCommand sqlCommandSurnameValue = new SqlCommand("Select Surname from Baza Where Login= '" + username + "';", sqlcon);
+            LabelSurnameValue.Text = sqlCommandSurnameValue.ExecuteScalar().ToString();
 
             SqlCommand sqlCommandToPaidValue = new SqlCommand("Select Prize from Baza Where Login= '" + username + "';", sqlcon);
             LabelToPaidValue.Text = sqlCommandToPaidValue.ExecuteScalar().ToString();
@@ -49,5 +56,23 @@ namespace WebApplication1.Pages
             sqlcon.Close();
         }
 
+        protected void buttonChangePassword_Click(object sender, EventArgs e)
+        {
+            SqlCommand sqlGetPassword = new SqlCommand("Select Password from Baza Where Login= '" + username + "';", sqlcon);
+            sqlcon.Open();
+            if (sqlGetPassword.ExecuteScalar().ToString() == inputOldPassword.Text && inputNewPassword.Text.Length > 4)
+            {
+                SqlCommand sqlCommandChangePassword = new SqlCommand("UPDATE Baza SET Password = '" + inputNewPassword.Text + "' WHERE Login = '" + username + "';", sqlcon);
+                sqlCommandChangePassword.ExecuteNonQuery();
+                LabelIncorrectLoginPassword.Visible = false; 
+                LabelPasswordChanged.Visible = true;
+            }
+            else
+            {
+                LabelIncorrectLoginPassword.Visible = true;
+                LabelPasswordChanged.Visible = false;
+            }
+            sqlcon.Close();
+        }
     }
 }

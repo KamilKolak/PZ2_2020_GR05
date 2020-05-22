@@ -3,19 +3,21 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-#buttonLogout {
+.btn {
     max-width: 200px;
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
 }
 
-#info {
-    margin: auto;
+#LabelIncorrectLoginPassword {
+    color: red;
 }
 
-#form1 {
-    margin-top: 20px;
+#LabelPasswordChanged {
+    color: green;
 }
+
+
