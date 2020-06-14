@@ -73,5 +73,10 @@ namespace Hospital
         {
             oknoWyboruRecepcjonisty.Show();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

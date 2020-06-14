@@ -77,7 +77,7 @@
             // 
             this.Receptionist_checkBox.AutoSize = true;
             this.Receptionist_checkBox.Location = new System.Drawing.Point(427, 99);
-            this.Receptionist_checkBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Receptionist_checkBox.Margin = new System.Windows.Forms.Padding(2);
             this.Receptionist_checkBox.Name = "Receptionist_checkBox";
             this.Receptionist_checkBox.Size = new System.Drawing.Size(114, 17);
             this.Receptionist_checkBox.TabIndex = 11;
@@ -89,7 +89,7 @@
             // 
             this.Doctor_checkBox.AutoSize = true;
             this.Doctor_checkBox.Location = new System.Drawing.Point(427, 120);
-            this.Doctor_checkBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Doctor_checkBox.Margin = new System.Windows.Forms.Padding(2);
             this.Doctor_checkBox.Name = "Doctor_checkBox";
             this.Doctor_checkBox.Size = new System.Drawing.Size(72, 17);
             this.Doctor_checkBox.TabIndex = 10;
@@ -100,7 +100,7 @@
             // Username_textBox
             // 
             this.Username_textBox.Location = new System.Drawing.Point(309, 77);
-            this.Username_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Username_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Username_textBox.Name = "Username_textBox";
             this.Username_textBox.Size = new System.Drawing.Size(91, 20);
             this.Username_textBox.TabIndex = 9;
@@ -139,7 +139,7 @@
             // Password_textBox
             // 
             this.Password_textBox.Location = new System.Drawing.Point(309, 101);
-            this.Password_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Password_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Password_textBox.Name = "Password_textBox";
             this.Password_textBox.Size = new System.Drawing.Size(91, 20);
             this.Password_textBox.TabIndex = 12;
@@ -157,7 +157,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 258);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(358, 86);
@@ -203,7 +203,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(35, 383);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(358, 86);
@@ -214,7 +214,7 @@
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(35, 514);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(358, 86);
@@ -246,7 +246,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(398, 302);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 42);
             this.button1.TabIndex = 20;
@@ -257,7 +257,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(398, 427);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 42);
             this.button2.TabIndex = 21;
@@ -268,7 +268,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(398, 558);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 42);
             this.button3.TabIndex = 22;
@@ -280,7 +280,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(17, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,7 +290,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(398, 258);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(118, 42);
             this.button4.TabIndex = 24;
@@ -301,7 +301,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(398, 383);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(118, 42);
             this.button5.TabIndex = 25;
@@ -312,7 +312,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(398, 511);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(118, 42);
             this.button6.TabIndex = 26;
@@ -324,7 +324,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(427, 141);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(84, 17);
             this.checkBox1.TabIndex = 27;
@@ -345,7 +345,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(398, 648);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(118, 42);
             this.button7.TabIndex = 32;
@@ -356,7 +356,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(398, 695);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(118, 42);
             this.button8.TabIndex = 31;
@@ -380,7 +380,7 @@
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(35, 651);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(358, 86);

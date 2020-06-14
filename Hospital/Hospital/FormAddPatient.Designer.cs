@@ -72,7 +72,7 @@
             // Password_textBox
             // 
             this.Password_textBox.Location = new System.Drawing.Point(351, 50);
-            this.Password_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Password_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Password_textBox.Name = "Password_textBox";
             this.Password_textBox.Size = new System.Drawing.Size(140, 20);
             this.Password_textBox.TabIndex = 131;
@@ -90,7 +90,7 @@
             // Login_textBox
             // 
             this.Login_textBox.Location = new System.Drawing.Point(352, 25);
-            this.Login_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Login_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.Login_textBox.Name = "Login_textBox";
             this.Login_textBox.Size = new System.Drawing.Size(140, 20);
             this.Login_textBox.TabIndex = 129;
@@ -99,7 +99,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(243, 188);
+            this.label12.Location = new System.Drawing.Point(234, 189);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 16);
             this.label12.TabIndex = 128;
@@ -116,9 +116,9 @@
             // Back_button
             // 
             this.Back_button.Location = new System.Drawing.Point(16, 289);
-            this.Back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back_button.Margin = new System.Windows.Forms.Padding(2);
             this.Back_button.Name = "Back_button";
-            this.Back_button.Size = new System.Drawing.Size(188, 33);
+            this.Back_button.Size = new System.Drawing.Size(205, 33);
             this.Back_button.TabIndex = 126;
             this.Back_button.Text = "WRÓĆ";
             this.Back_button.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             // 
             this.Add_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Add_button.Location = new System.Drawing.Point(16, 384);
-            this.Add_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_button.Margin = new System.Windows.Forms.Padding(2);
             this.Add_button.Name = "Add_button";
             this.Add_button.Size = new System.Drawing.Size(474, 33);
             this.Add_button.TabIndex = 125;
@@ -231,7 +231,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(205, 249);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,11 +278,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(248, 275);
+            this.label10.Location = new System.Drawing.Point(234, 275);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 16);
             this.label10.TabIndex = 139;
             this.label10.Text = "Wizyta Miesiac";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // textBox3
             // 
